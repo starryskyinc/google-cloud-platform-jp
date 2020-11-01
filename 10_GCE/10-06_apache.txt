@@ -1,0 +1,48 @@
+// インストールされるバージョンを確認 
+$ yum info httpd
+
+// httpdをインストール
+$ sudo yum install -y httpd 
+
+// httpdのバージョンを確認
+$ httpd -v
+
+// インストールされるphpのバージョンを確認
+$ yum info php
+
+// Remiリポジトリのインストール
+$ sudo yum install -y http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+
+// remiリポジトリを有効にする
+$ sudo vim /etc/yum.repos.d/remi-php74.repo
+[remi-php74]
+・・・
+enabled=1
+・・・
+
+// yum listでphp7.4がインストールできるか確認
+$ yum list | grep php74
+
+// インストールされるphpのバージョンを確認
+$ yum info php
+
+// phpとphp-mysqlをインストール
+$ sudo yum install -y php php-mysql
+
+// phpのバージョンを確認する
+$ php -v
+
+// httpdを起動
+$ sudo systemctl start httpd 
+
+// httpdを自動起動
+$ sudo systemctl enable httpd
+
+// 自動起動の設定確認
+$ systemctl is-enabled httpd
+
+
+
+
+
+

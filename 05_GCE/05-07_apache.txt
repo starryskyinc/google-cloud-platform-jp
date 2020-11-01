@@ -1,0 +1,20 @@
+// インストールされるバージョンを確認 
+$ yum info httpd
+
+// httpdをインストール
+$ sudo yum install -y httpd 
+
+// httpdのバージョンを確認
+$ httpd -v
+
+// httpdをリスタート
+$ sudo systemctl start httpd 
+
+// httpdの起動ステータスを確認
+$ systemctl status httpd 
+
+// httpdをリスタート
+$ sudo systemctl enable httpd
+
+// httpdの自動起動を設定
+$ systemctl is-enabled httpd

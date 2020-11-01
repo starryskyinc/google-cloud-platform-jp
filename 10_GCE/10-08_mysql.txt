@@ -1,0 +1,44 @@
+// MySQLサーバを起動
+$ sudo systemctl start mysqld
+
+// MySQLの起動の状態を確認
+$ sudo systemctl status mysqld
+
+// サーバ起動時に、自動起動
+$ sudo systemctl enable mysqld
+
+// MySQLのrootユーザーの初期パスワードを取得
+$ sudo cat /var/log/mysqld.log | grep 'password '
+
+// MySQLの初期設定
+$ sudo mysql_secure_installation
+
+// MySQLににユーザー名とパスワードを指定してログイン
+$ mysql -u root -p
+
+// MySQLユーザーを作成
+> create user 'wp-user'@'localhost' identified with mysql_native_password by 'YOUR-PASSWORD';
+
+// データーベースの作成 
+> create database  `wordpress`;
+
+// 作成したデータベースをwp-userが使えるようにする
+> grant all on `wordpress`.* to 'wp-user'@'localhost';
+
+// 設定を反映
+> flush privileges;
+
+// ログアウト
+> exit
+
+// wp-userでMySQLにログイン
+$ mysql -u wp-user -p
+
+// データベース一覧を表示します。
+> show databases;
+
+// ログアウト
+> exit
+
+
+

@@ -1,0 +1,28 @@
+// wgetのバージョンを確認
+$ wget --version
+
+// wgetをインストール
+$ sudo yum install -y wget 
+
+// WordPressをダウンロード
+$ wget https://ja.wordpress.org/latest-ja.tar.gz
+
+// ファイルを一覧表示
+$ ls
+
+// ファイルを展開
+$ tar -xzf latest-ja.tar.gz
+
+// ファイルを一覧表示
+$ ls
+
+// ファイルを一覧表示
+$ ls  wordpress/*
+
+// ファイルのコピー
+$ cp -r wordpress/* /var/www/html/
+
+// WordPressの設定ファイルを開く
+$ vim /var/www/html/wp-config.php
+
+

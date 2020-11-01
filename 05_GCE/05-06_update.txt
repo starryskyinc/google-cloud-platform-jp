@@ -1,0 +1,2 @@
+// yum アップデートを実行
+$ sudo yum update

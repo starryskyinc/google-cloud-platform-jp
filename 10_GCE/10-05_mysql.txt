@@ -1,0 +1,15 @@
+// yumアップデート
+$ sudo yum update -y 
+
+// MySQL リポジトリインストール
+$ sudo yum -y localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+
+// インストールされる、mysqlのバージョンを確認
+$ yum info mysql-community-server
+
+// MySQLをインストール
+$ sudo yum install -y  mysql-community-server
+
+// MySQLのバージョンを確認
+$ mysqld --version
+
