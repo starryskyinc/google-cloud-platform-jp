@@ -1,0 +1,7 @@
+// HTMLファイル作成
+$ sudo sh -c "echo 'Hello GCP' >> /var/www/html/index.html"
+
+// HTMLファイルの中身を表示
+$ cat /var/www/html/index.html
+
+
