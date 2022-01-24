@@ -7,6 +7,9 @@ $ sudo yum -y localinstall https://dev.mysql.com/get/mysql80-community-release-e
 // インストールされる、mysqlのバージョンを確認
 $ yum info mysql-community-server
 
+// 新しいGPGキーをインポート(追加：2022/1/24)
+$ sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+
 // MySQLをインストール
 $ sudo yum install -y  mysql-community-server
 
